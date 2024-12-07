@@ -1,0 +1,1075 @@
+<html>
+    <head>
+        <style>                     
+            #tallerTextarea {
+                height: 200px; 
+                resize: none;
+            }
+
+            .zero {
+                width:15px;
+                height: 15px;
+                border-radius: 50%;
+                vertical-align: middle;
+                border: 1px solid black;
+                appearance: none;
+                -webkit-appearance: none;
+                outline: none;
+                cursor: pointer;
+              }
+              .zero:checked {
+                appearance: auto;
+                clip-path: circle(50% at 50% 50%);
+                background-color: blue;
+              }
+
+              .customcb {
+                width: 17px;
+                height: 17px;
+                margin: 2px 0 2px 0;
+                background: #ddd;
+                border-radius: 100%;
+                position: relative;
+                -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .5);
+                -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, .5);
+                box-shadow: 0 1px 1px rgba(0, 0, 0, .5);
+              }
+              .customcb label.inner {
+                display: block;
+                width: 12.75px;
+                height: 12.75px;
+                border-radius: 100px;
+                -webkit-transition: all .5s ease;
+                -moz-transition: all .5s ease;
+                -o-transition: all .5s ease;
+                -ms-transition: all .5s ease;
+                transition: all .5s ease;
+                cursor: pointer;
+                position: absolute;
+                top: 2.125px;
+                left: 2.125px;
+                z-index: 1;
+                background: #eee;
+                -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .5);
+                -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .5);
+                box-shadow: inset 0 1px 1px rgba(0, 0, 0, .5)
+              }
+              .customcb label.outer {
+                margin-left: 25px;
+              }
+              .customcb [type=checkbox] {
+                display: none
+              }
+              .red.customcb input[type=checkbox]:checked+label.inner {
+                background: red
+              }
+              .orange.customcb input[type=checkbox]:checked+label.inner {
+                background: #d61
+              }
+              .green.customcb input[type=checkbox]:checked+label.inner {
+                background: green
+              }
+        </style>
+    </head>
+
+<body>
+
+    <div class="red customcb">
+        <input type="checkbox" value="1" id="customcb1" name="" />
+        <label class="inner" for="customcb1"></label>
+        <label class="outer" for="customcb1">Red</label>
+      </div>
+      
+      <div class="orange customcb">
+        <input type="checkbox" value="1" id="customcb2" name="" />
+        <label class="inner" for="customcb2"></label>
+        <label class="outer" for="customcb2">Amber</label>
+      </div>
+      
+      <div class="green customcb">
+        <input type="checkbox" value="1" id="customcb3" name="" />
+        <label class="inner" for="customcb3"></label>
+        <label class="outer" for="customcb3">Green</label>
+      </div>
+
+
+<div class="container">
+    <div class="header">
+      <img
+        src="https://imgsrv.roll20.net?src=https%3A//vignette4.wikia.nocookie.net/whitewolf/images/e/e7/HunterLogo.png/revision/latest%3Fcb%3D20050604174916"
+        style="max-height: 100px">
+    </div>
+  
+    <div class="character1 numberrow">
+      
+        <label for="attr_name">
+        <b>Name:</b>
+      </label><input type="text" name="attr_name" />  
+      
+      <label for="attr_concept">
+        <b>Concept:</b>
+      </label><input type="text" name="attr_concept" />   
+      
+      <label for="attr_creed">
+        <b>Creed:</b>
+      </label><input type="text" name="attr_creed" />
+    </div>
+    
+    <div class="character2 numberrow">
+      
+        <label for="attr_cell">
+        <b>Cell:</b>
+      </label><input type="text" name="attr_cell" />
+      
+      <label for="attr_ambition">
+        <b>Ambition:</b>
+      </label><input type="text" name="attr_ambition" />
+
+      <label for="attr_desire">
+        <b>Desire:</b>
+      </label><input type="text" name="attr_desire" />
+     
+    </div>
+    
+    <div class="character3 numberrow">
+    
+        <label for="attr_drive">
+        <b>Drive:</b>
+      </label><input type="text" name="attr_drive" />     
+
+      
+      <label for="attr_red">
+        <b>Redemption:</b>
+      </label><input type="text" name="attr_red" />
+
+      <label for="attr_xp">
+        <b>Total Experience:</b>
+      </label><input type="text" name="attr_xp" />
+
+      <label for="attr_spentxp">
+        <b>Spent Experience:</b>
+      </label><input type="text" name="attr_spentxp" />
+    </div>
+    
+    <div class="subhead1">
+      <hr class="break-line">
+      <h1>Attributes</h1>
+    </div>
+  
+  
+    <div class="attrib1">
+      <h3>Physical</h3>
+      <div>
+        <div class="dotrow">
+          <label for="attr_Strength"><b>Strength</b></label>
+          <div><input type="checkbox" name="attr_Strength" value="1" checked="checked" /><span></span>
+            <input type="checkbox" name="attr_Strength" value="2" /><span></span>
+            <input type="checkbox" name="attr_Strength" value="3" /><span></span>
+            <input type="checkbox" name="attr_Strength" value="4" /><span></span>
+            <input type="checkbox" name="attr_Strength" value="5" /><span></span>           
+          </div>
+        </div>
+        <div class="dotrow">
+          <label for="attr_Dexterity"><b>Dexterity</b></label>
+          <div><input type="checkbox" name="attr_Dexterity" value="1" checked="checked" />
+            <span></span> <input type="checkbox" name="attr_Dexterity" value="2" />
+            <span></span> <input type="checkbox" name="attr_Dexterity" value="3" />
+            <span></span> <input type="checkbox" name="attr_Dexterity" value="4" />
+            <span></span> <input type="checkbox" name="attr_Dexterity" value="5" />   
+            <span></span>
+          </div>
+        </div>
+        <div class="dotrow">
+          <label for="attr_Stamina"><b>Stamina</b></label>
+          <div><input type="checkbox" name="attr_Stamina" value="1" checked="checked" />
+            <span></span> <input type="checkbox" name="attr_Stamina" value="2" />
+            <span></span> <input type="checkbox" name="attr_Stamina" value="3" />
+            <span></span> <input type="checkbox" name="attr_Stamina" value="4" />
+            <span></span> <input type="checkbox" name="attr_Stamina" value="5" />   
+            <span></span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="attrib2">
+      <h3>Social</h3>
+      <div class="dotrow">
+        <label for="attr_Charisma"><b>Charisma</b></label>
+        <div><input type="checkbox" name="attr_Charisma" value="1" checked="checked" />
+          <span></span> <input type="checkbox" name="attr_Charisma" value="2" />
+          <span></span> <input type="checkbox" name="attr_Charisma" value="3" />
+          <span></span> <input type="checkbox" name="attr_Charisma" value="4" />     
+          <span></span>
+        </div>
+      </div>
+      <div class="dotrow">
+        <label for="attr_Manipulation"><b>Manipulation</b></label>
+        <div><input type="checkbox" name="attr_Manipulation" value="1" checked="checked" />
+          <span></span> <input type="checkbox" name="attr_Manipulation" value="2" />
+          <span></span> <input type="checkbox" name="attr_Manipulation" value="3" />
+          <span></span> <input type="checkbox" name="attr_Manipulation" value="4" />
+          <span></span> <input type="checkbox" name="attr_Manipulation" value="5" />   
+          <span></span>
+        </div>
+      </div>
+      <div class="dotrow">
+        <label for="attr_Composure"><b>Composure</b></label>
+        <div><input type="checkbox" name="attr_Composure" value="1" checked="checked" />
+          <span></span> <input type="checkbox" name="attr_Appearance" value="2" />
+          <span></span> <input type="checkbox" name="attr_Appearance" value="3" />
+          <span></span> <input type="checkbox" name="attr_Appearance" value="4" />
+          <span></span> <input type="checkbox" name="attr_Appearance" value="5" />  
+          <span></span>
+        </div>
+      </div>
+    </div>
+    <div class="attrib3">
+      <h3>Mental</h3>
+      <div> 
+        <div class="dotrow">
+          <label for="attr_Intelligence"><b>Intelligence</b></label>
+          <div><input type="checkbox" name="attr_Intelligence" value="1" checked="checked" />
+            <span></span> <input type="checkbox" name="attr_Intelligence" value="2" />
+            <span></span> <input type="checkbox" name="attr_Intelligence" value="3" />
+            <span></span> <input type="checkbox" name="attr_Intelligence" value="4" />
+            <span></span> <input type="checkbox" name="attr_Intelligence" value="5" />      
+            <span></span>
+          </div>
+        </div>
+        <div class="dotrow">
+          <label for="attr_Wits"><b>Wits</b></label>
+          <div><input type="checkbox" name="attr_Wits" value="1" checked="checked" />
+            <span></span> <input type="checkbox" name="attr_Wits" value="2" />
+            <span></span> <input type="checkbox" name="attr_Wits" value="3" />
+            <span></span> <input type="checkbox" name="attr_Wits" value="4" />
+            <span></span> <input type="checkbox" name="attr_Wits" value="5" />     
+            <span></span>
+          </div>
+        </div>
+        <div class="dotrow">
+            <label for="attr_Resolve"><b>Resolve</b></label>
+            <div><input type="checkbox" name="attr_Resolve" value="1" checked="checked" />
+              <span></span> <input type="checkbox" name="attr_Perception" value="2" />
+              <span></span> <input type="checkbox" name="attr_Perception" value="3" />
+              <span></span> <input type="checkbox" name="attr_Perception" value="4" />
+              <span></span> <input type="checkbox" name="attr_Perception" value="5" />  
+              <span></span>
+            </div>
+          </div>
+      </div>
+    </div>
+  
+    <div class="subhead2">
+      <hr class="break-line">
+      <h1>Skills</h1>
+    </div>
+  
+    <div class="skills1">   
+      <div class="dotrow">
+        <label for="attr_Athletics">Athletics</label>
+        <div><input type="checkbox" name="attr_Athletics" value="0" class="zero" />
+          <span></span> <input type="checkbox" name="attr_Athletics" value="1" />
+          <span></span> <input type="checkbox" name="attr_Athletics" value="2" />
+          <span></span> <input type="checkbox" name="attr_Athletics" value="3" />
+          <span></span> <input type="checkbox" name="attr_Athletics" value="4" />
+          <span></span> <input type="checkbox" name="attr_Athletics" value="5" />
+
+          <span></span>
+        </div>
+      </div>     
+      <div class="dotrow">
+        <label for="attr_Brawl">Brawl</label>
+        <div><input type="checkbox" name="attr_Brawl" value="0" class="zero" />
+          <span></span> <input type="checkbox" name="attr_Brawl" value="1" />
+          <span></span> <input type="checkbox" name="attr_Brawl" value="2" />
+          <span></span> <input type="checkbox" name="attr_Brawl" value="3" />
+          <span></span> <input type="checkbox" name="attr_Brawl" value="4" />
+          <span></span> <input type="checkbox" name="attr_Brawl" value="5" />
+
+          <span></span>
+        </div>
+      </div>
+      <div class="dotrow">
+        <label for="attr_Craft">Craft</label>
+        <div><input type="checkbox" name="attr_Craft" value="0" class="zero"/>
+          <span></span> <input type="checkbox" name="attr_Craft" value="1" />
+          <span></span> <input type="checkbox" name="attr_Craft" value="2" />
+          <span></span> <input type="checkbox" name="attr_Craft" value="3" />
+          <span></span> <input type="checkbox" name="attr_Craft" value="4" />
+          <span></span> <input type="checkbox" name="attr_Craft" value="5" />
+
+          <span></span>
+        </div>
+      </div>
+  
+      <div class="dotrow">
+        <label for="attr_Driving">Driving</label>
+        <div><input type="checkbox" name="attr_Driving" value="0" class="zero" />
+          <span></span> <input type="checkbox" name="attr_Driving" value="1" />
+          <span></span> <input type="checkbox" name="attr_Driving" value="2" />
+          <span></span> <input type="checkbox" name="attr_Driving" value="3" />
+          <span></span> <input type="checkbox" name="attr_Driving" value="4" />
+          <span></span> <input type="checkbox" name="attr_Driving" value="5" />
+
+          <span></span>
+        </div>
+      </div>
+  
+      <div class="dotrow">
+        <label for="attr_Firearms">Firearms</label>
+        <div><input type="checkbox" name="attr_Firearms" value="0" class="zero"  />
+          <span></span> <input type="checkbox" name="attr_Firearms" value="1" />
+          <span></span> <input type="checkbox" name="attr_Firearms" value="2" />
+          <span></span> <input type="checkbox" name="attr_Firearms" value="3" />
+          <span></span> <input type="checkbox" name="attr_Firearms" value="4" />
+          <span></span> <input type="checkbox" name="attr_Firearms" value="5" />
+
+          <span></span>
+        </div>
+      </div>
+  
+      <div class="dotrow">
+        <label for="attr_Larceny">Larceny</label>
+        <div><input type="checkbox" name="attr_Larceny" value="0" class="zero"  />
+          <span></span> <input type="checkbox" name="attr_Larceny" value="1" />
+          <span></span> <input type="checkbox" name="attr_Larceny" value="2" />
+          <span></span> <input type="checkbox" name="attr_Larceny" value="3" />
+          <span></span> <input type="checkbox" name="attr_Larceny" value="4" />
+          <span></span> <input type="checkbox" name="attr_Larceny" value="5" />
+
+          <span></span>
+        </div>
+      </div>
+  
+      <div class="dotrow">
+        <label for="attr_Melee">Melee</label>
+        <div><input type="checkbox" name="attr_Melee" value="0" class="zero" />
+          <span></span> <input type="checkbox" name="attr_Melee" value="1" />
+          <span></span> <input type="checkbox" name="attr_Melee" value="2" />
+          <span></span> <input type="checkbox" name="attr_Melee" value="3" />
+          <span></span> <input type="checkbox" name="attr_Melee" value="4" />
+          <span></span> <input type="checkbox" name="attr_Melee" value="5" />
+
+          <span></span>
+        </div>
+      </div>
+  
+      <div class="dotrow">
+        <label for="attr_Stealth">Stealth</label>
+        <div><input type="checkbox" name="attr_Stealth" value="0" class="zero"  />
+          <span></span> <input type="checkbox" name="attr_Stealth" value="1" />
+          <span></span> <input type="checkbox" name="attr_Stealth" value="2" />
+          <span></span> <input type="checkbox" name="attr_Stealth" value="3" />
+          <span></span> <input type="checkbox" name="attr_Stealth" value="4" />
+          <span></span> <input type="checkbox" name="attr_Stealth" value="5" />
+
+          <span></span>
+        </div>
+      </div>
+
+      <div class="dotrow">
+        <label for="attr_Survival">Survival</label>
+        <div><input type="checkbox" name="attr_Survival" value="0" class="zero" />
+          <span></span> <input type="checkbox" name="attr_Survival" value="1" />
+          <span></span> <input type="checkbox" name="attr_Survival" value="2" />
+          <span></span> <input type="checkbox" name="attr_Survival" value="3" />
+          <span></span> <input type="checkbox" name="attr_Survival" value="4" />
+          <span></span> <input type="checkbox" name="attr_Survival" value="5" />
+
+          <span></span>
+        </div>
+      </div>
+
+      <div class="skills2">
+        <hr class="break-line">   
+  
+    </div>
+
+      <div class="dotrow">
+        <label for="attr_Animal_Ken">Animal&nbsp;Ken</label>
+        <div><input type="checkbox" name="attr_Animal_Ken" value="0" class="zero"  />
+          <span></span> <input type="checkbox" name="attr_Animal_Ken" value="1" />
+          <span></span> <input type="checkbox" name="attr_Animal_Ken" value="2" />
+          <span></span> <input type="checkbox" name="attr_Animal_Ken" value="3" />
+          <span></span> <input type="checkbox" name="attr_Animal_Ken" value="4" />
+          <span></span> <input type="checkbox" name="attr_Animal_Ken" value="5" />
+
+          <span></span>
+        </div>
+      </div>
+
+      <div class="dotrow">
+        <label for="attr_Etiquette">Etiquette</label>
+        <div><input type="checkbox" name="attr_Etiquette" value="0" class="zero" />
+          <span></span> <input type="checkbox" name="attr_Etiquette" value="1" />
+          <span></span> <input type="checkbox" name="attr_Etiquette" value="2" />
+          <span></span> <input type="checkbox" name="attr_Etiquette" value="3" />
+          <span></span> <input type="checkbox" name="attr_Etiquette" value="4" />
+          <span></span> <input type="checkbox" name="attr_Etiquette" value="5" />
+
+          <span></span>
+        </div>
+      </div>
+  
+      <div class="dotrow">
+        <label for="attr_Insight">Insight</label>
+        <div><input type="checkbox" name="attr_Insight" value="0" class="zero"  />
+          <span></span> <input type="checkbox" name="attr_Insight" value="1" />
+          <span></span> <input type="checkbox" name="attr_Insight" value="2" />
+          <span></span> <input type="checkbox" name="attr_Insight" value="3" />
+          <span></span> <input type="checkbox" name="attr_Insight" value="4" />
+          <span></span> <input type="checkbox" name="attr_Insight" value="5" />
+
+          <span></span>
+        </div>
+      </div>
+  
+      <div class="dotrow">
+        <label for="attr_Intimidation">Intimidation</label>
+        <div><input type="checkbox" name="attr_Demolitions" value="0" class="zero" />
+          <span></span> <input type="checkbox" name="attr_Intimidation" value="1" />
+          <span></span> <input type="checkbox" name="attr_Intimidation" value="2" />
+          <span></span> <input type="checkbox" name="attr_Intimidation" value="3" />
+          <span></span> <input type="checkbox" name="attr_Intimidation" value="4" />
+          <span></span> <input type="checkbox" name="attr_Intimidation" value="5" />
+
+          <span></span>
+        </div>
+      </div>   
+
+      <div class="dotrow">
+        <label for="attr_Leadership">Leadership</label>
+        <div><input type="checkbox" name="attr_Leadership" value="0" class="zero" />
+          <span></span> <input type="checkbox" name="attr_Leadership" value="1" />
+          <span></span> <input type="checkbox" name="attr_Leadership" value="2" />
+          <span></span> <input type="checkbox" name="attr_Leadership" value="3" />
+          <span></span> <input type="checkbox" name="attr_Leadership" value="4" />
+          <span></span> <input type="checkbox" name="attr_Leadership" value="5" />
+
+          <span></span>
+        </div>
+      </div>
+    
+      <div class="dotrow">
+        <label for="attr_Performance">Performance</label>
+        <div><input type="checkbox" name="attr_Performance" value="0" class="zero"/>
+          <span></span> <input type="checkbox" name="attr_Performance" value="1" />
+          <span></span> <input type="checkbox" name="attr_Performance" value="2" />
+          <span></span> <input type="checkbox" name="attr_Performance" value="3" />
+          <span></span> <input type="checkbox" name="attr_Performance" value="4" />
+          <span></span> <input type="checkbox" name="attr_Performance" value="5" />
+
+          <span></span>
+        </div>
+      </div>
+
+      <div class="dotrow">
+        <label for="attr_Persuasion">Persuasion</label>
+        <div><input type="checkbox" name="attr_Persuasion" value="0" class="zero"  />
+          <span></span> <input type="checkbox" name="attr_Persuasion" value="1" />
+          <span></span> <input type="checkbox" name="attr_Persuasion" value="2" />
+          <span></span> <input type="checkbox" name="attr_Persuasion" value="3" />
+          <span></span> <input type="checkbox" name="attr_Persuasion" value="4" />
+          <span></span> <input type="checkbox" name="attr_Persuasion" value="5" />
+
+          <span></span>
+        </div>
+      </div>
+
+        
+      <div class="dotrow">
+        <label for="attr_Streetwise">Streetwise</label>
+        <div><input type="checkbox" name="attr_Streetwise" value="0" class="zero" />
+          <span></span> <input type="checkbox" name="attr_Streetwise" value="1" />
+          <span></span> <input type="checkbox" name="attr_Streetwise" value="2" />
+          <span></span> <input type="checkbox" name="attr_Streetwise" value="3" />
+          <span></span> <input type="checkbox" name="attr_Streetwise" value="4" />
+          <span></span> <input type="checkbox" name="attr_Streetwise" value="5" />
+   
+          <span></span>
+        </div>
+      </div>
+
+  
+      <div class="dotrow">
+        <label for="attr_Subterfuge">Subterfuge</label>
+        <div><input type="checkbox" name="attr_Subterfuge" value="0" class="zero" />
+          <span></span> <input type="checkbox" name="attr_Subterfuge" value="1" />
+          <span></span> <input type="checkbox" name="attr_Subterfuge" value="2" />
+          <span></span> <input type="checkbox" name="attr_Subterfuge" value="3" />
+          <span></span> <input type="checkbox" name="attr_Subterfuge" value="4" />
+          <span></span> <input type="checkbox" name="attr_Subterfuge" value="5" />
+
+          <span></span>
+        </div>
+      </div>
+
+      <div class="skills3">
+        <hr class="break-line">    
+
+        <div class="dotrow">
+            <label for="attr_Academics">Academics</label>
+            <div><input type="checkbox" name="attr_Academics" value="0" class="zero"  />
+              <span></span> <input type="checkbox" name="attr_Academics" value="1" />
+              <span></span> <input type="checkbox" name="attr_Academics" value="2" />
+              <span></span> <input type="checkbox" name="attr_Academics" value="3" />
+              <span></span> <input type="checkbox" name="attr_Academics" value="4" />
+              <span></span> <input type="checkbox" name="attr_Academics" value="5" />
+              <span></span> <input type="checkbox" name="attr_Academics" value="6" />
+              <span></span> <input type="checkbox" name="attr_Academics" value="7" />
+              <span></span> <input type="checkbox" name="attr_Academics" value="8" />
+              <span></span>
+            </div>
+          </div>
+
+  
+    </div>
+  
+      <div class="dotrow">
+        <label for="attr_Awareness">Awareness</label>
+        <div><input type="checkbox" name="attr_Awareness" value="0" class="zero"  />
+          <span></span> <input type="checkbox" name="attr_Awareness" value="1" />
+          <span></span> <input type="checkbox" name="attr_Awareness" value="2" />
+          <span></span> <input type="checkbox" name="attr_Awareness" value="3" />
+          <span></span> <input type="checkbox" name="attr_Awareness" value="4" />
+          <span></span> <input type="checkbox" name="attr_Awareness" value="5" />
+
+          <span></span>
+        </div>
+      </div>
+
+      <div class="dotrow">
+        <label for="attr_Finance">Finance</label>
+        <div><input type="checkbox" name="attr_Finance" value="0" class="zero"  />
+          <span></span> <input type="checkbox" name="attr_Finance" value="1" />
+          <span></span> <input type="checkbox" name="attr_Finance" value="2" />
+          <span></span> <input type="checkbox" name="attr_Finance" value="3" />
+          <span></span> <input type="checkbox" name="attr_Finance" value="4" />
+          <span></span> <input type="checkbox" name="attr_Finance" value="5" />
+          <span></span> <input type="checkbox" name="attr_Finance" value="6" />
+          <span></span> <input type="checkbox" name="attr_Finance" value="7" />
+          <span></span> <input type="checkbox" name="attr_Finance" value="8" />
+          <span></span>
+        </div>
+      </div>
+
+      <div class="dotrow">
+        <label for="attr_Investigation">Investigation</label>
+        <div><input type="checkbox" name="attr_Investigation" value="0" class="zero"  />
+          <span></span> <input type="checkbox" name="attr_Investigation" value="1" />
+          <span></span> <input type="checkbox" name="attr_Investigation" value="2" />
+          <span></span> <input type="checkbox" name="attr_Investigation" value="3" />
+          <span></span> <input type="checkbox" name="attr_Investigation" value="4" />
+          <span></span> <input type="checkbox" name="attr_Investigation" value="5" />
+          <span></span> <input type="checkbox" name="attr_Investigation" value="6" />
+          <span></span> <input type="checkbox" name="attr_Investigation" value="7" />
+          <span></span> <input type="checkbox" name="attr_Investigation" value="8" />
+          <span></span>
+        </div>
+      </div>
+
+        
+      <div class="dotrow">
+        <label for="attr_Medicine">Medicine</label>
+        <div><input type="checkbox" name="attr_Medicine" value="0" class="zero" />
+          <span></span> <input type="checkbox" name="attr_Medicine" value="1" />
+          <span></span> <input type="checkbox" name="attr_Medicine" value="2" />
+          <span></span> <input type="checkbox" name="attr_Medicine" value="3" />
+          <span></span> <input type="checkbox" name="attr_Medicine" value="4" />
+          <span></span> <input type="checkbox" name="attr_Medicine" value="5" />
+          <span></span> <input type="checkbox" name="attr_Medicine" value="6" />
+          <span></span> <input type="checkbox" name="attr_Medicine" value="7" />
+          <span></span> <input type="checkbox" name="attr_Medicine" value="8" />
+          <span></span>
+        </div>
+      </div>
+   
+      <div class="dotrow">
+        <label for="attr_Occult">Occult</label>
+        <div><input type="checkbox" name="attr_Occult" value="0" class="zero"  />
+          <span></span> <input type="checkbox" name="attr_Occult" value="1" />
+          <span></span> <input type="checkbox" name="attr_Occult" value="2" />
+          <span></span> <input type="checkbox" name="attr_Occult" value="3" />
+          <span></span> <input type="checkbox" name="attr_Occult" value="4" />
+          <span></span> <input type="checkbox" name="attr_Occult" value="5" />
+          <span></span> <input type="checkbox" name="attr_Occult" value="6" />
+          <span></span> <input type="checkbox" name="attr_Occult" value="7" />
+          <span></span> <input type="checkbox" name="attr_Occult" value="8" />
+          <span></span>
+        </div>
+      </div>
+  
+      <div class="dotrow">
+        <label for="attr_Politics">Politics</label>
+        <div><input type="checkbox" name="attr_Politics" value="0" class="zero" />
+          <span></span> <input type="checkbox" name="attr_Politics" value="1" />
+          <span></span> <input type="checkbox" name="attr_Politics" value="2" />
+          <span></span> <input type="checkbox" name="attr_Politics" value="3" />
+          <span></span> <input type="checkbox" name="attr_Politics" value="4" />
+          <span></span> <input type="checkbox" name="attr_Politics" value="5" />
+          <span></span> <input type="checkbox" name="attr_Politics" value="6" />
+          <span></span> <input type="checkbox" name="attr_Politics" value="7" />
+          <span></span> <input type="checkbox" name="attr_Politics" value="8" />
+          <span></span>
+        </div>
+      </div>
+  
+      <div class="dotrow">
+        <label for="attr_Science">Science</label>
+        <div><input type="checkbox" name="attr_Science" value="0" class="zero" />
+          <span></span> <input type="checkbox" name="attr_Science" value="1" />
+          <span></span> <input type="checkbox" name="attr_Science" value="2" />
+          <span></span> <input type="checkbox" name="attr_Science" value="3" />
+          <span></span> <input type="checkbox" name="attr_Science" value="4" />
+          <span></span> <input type="checkbox" name="attr_Science" value="5" />
+          <span></span> <input type="checkbox" name="attr_Science" value="6" />
+          <span></span> <input type="checkbox" name="attr_Science" value="7" />
+          <span></span> <input type="checkbox" name="attr_Science" value="8" />
+          <span></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="dotrow">
+        <label for="attr_Technology">Technology</label>
+        <div><input type="checkbox" name="attr_Technology" value="0" class="zero" />
+          <span></span> <input type="checkbox" name="attr_Technology" value="1" />
+          <span></span> <input type="checkbox" name="attr_Technology" value="2" />
+          <span></span> <input type="checkbox" name="attr_Technology" value="3" />
+          <span></span> <input type="checkbox" name="attr_Technology" value="4" />
+          <span></span> <input type="checkbox" name="attr_Technology" value="5" />
+          <span></span> <input type="checkbox" name="attr_Technology" value="6" />
+          <span></span> <input type="checkbox" name="attr_Technology" value="7" />
+          <span></span> <input type="checkbox" name="attr_Technology" value="8" />
+          <span></span>
+        </div>
+      </div>
+
+      <div class="health">
+        <h3>Heath</h3>
+        <div>
+            <input type="checkbox" id="health1" name="attr_health" value="0" class="zero" />
+            <span></span> <input type="checkbox" id="health1" name="attr_health" value="1" />
+            <span></span> <input type="checkbox" id="health1" name="attr_health" value="2" />
+            <span></span> <input type="checkbox" id="health1" name="attr_health" value="3" />
+            <span></span> <input type="checkbox" id="health1" name="attr_health" value="4" />
+            <span></span> <input type="checkbox" id="health1" name="attr_health" value="5" />
+            <span></span> <input type="checkbox" id="health1" name="attr_health" value="6" />
+            <span></span> <input type="checkbox" id="health1" name="attr_health" value="7" />
+            <span></span> <input type="checkbox" id="health1" name="attr_health" value="8" />
+            <span></span> <input type="checkbox" id="health1" name="attr_health" value="9" />
+            <span></span> <input type="checkbox" id="health1" name="attr_health" value="10" /> 
+            <span></span>
+        </div>
+
+        <h3>Willpower</h3>    
+        <div>    
+          <div class="willpower">
+            <div class="willpower">
+              <div>
+                <input type="checkbox" id="willpower1" name="attr_willpower" value="0" class="zero" />
+                <span></span> <input type="checkbox" id="willpower1" name="attr_willpower" value="1" />
+                <span></span> <input type="checkbox" id="willpower1" name="attr_willpower" value="2" />
+                <span></span> <input type="checkbox" id="willpower1" name="attr_willpower" value="3" />
+                <span></span> <input type="checkbox" id="willpower1" name="attr_willpower" value="4" />
+                <span></span> <input type="checkbox" id="willpower1" name="attr_willpower" value="5" />
+                <span></span> <input type="checkbox" id="willpower1" name="attr_willpower" value="6" />
+                <span></span> <input type="checkbox" id="willpower1" name="attr_willpower" value="7" />
+                <span></span> <input type="checkbox" id="willpower1" name="attr_willpower" value="8" />
+                <span></span> <input type="checkbox" id="willpower1" name="attr_willpower" value="9" />
+                <span></span> <input type="checkbox" id="willpower1" name="attr_willpower" value="10" /> 
+              </div>
+              
+              <h3>Despair</h3>    
+              <div>    
+                <div class="despair">
+                  <div class="despair">
+                    <div>
+                      <input type="checkbox" id="despair1" name="attr_despair" value="0" class="zero" />
+
+            </div>
+
+
+
+  
+    <div class="subhead3">
+      <hr class="break-line">   
+    </div>
+  
+    <div class="edges1">
+      <h3>EDGES AND PERKS</h3>
+      <table>   
+        <tr>
+            <td>
+                  <input type="text" 
+                       placeholder="">
+              </td>  
+              <td>
+                <input type="text" 
+                     placeholder="">
+            </td>       
+            <td>
+                <input type="text" 
+                     placeholder="">
+            </td>      
+        </tr>
+        <tr>
+            <td>
+                  <input type="text" 
+                       placeholder="">
+              </td>  
+              <td>
+                <input type="text" 
+                     placeholder="">
+            </td>       
+            <td>
+                <input type="text" 
+                     placeholder="">
+            </td>      
+        </tr>
+        <tr>
+            <td>
+                  <input type="text" 
+                       placeholder="">
+              </td>  
+              <td>
+                <input type="text" 
+                     placeholder="">
+            </td>       
+            <td>
+                <input type="text" 
+                     placeholder="">
+            </td>      
+        </tr>
+        <tr>
+            <td>
+                  <input type="text" 
+                       placeholder="">
+              </td>  
+              <td>
+                <input type="text" 
+                     placeholder="">
+            </td>       
+            <td>
+                <input type="text" 
+                     placeholder="">
+            </td>      
+        </tr>
+        <tr>
+            <td>
+                  <input type="text" 
+                       placeholder="">
+              </td>  
+              <td>
+                <input type="text" 
+                     placeholder="">
+            </td>       
+            <td>
+                <input type="text" 
+                     placeholder="">
+            </td>      
+        </tr>
+        <tr>
+            <td>
+                  <input type="text" 
+                       placeholder="">
+              </td>  
+              <td>
+                <input type="text" 
+                     placeholder="">
+            </td>       
+            <td>
+                <input type="text" 
+                     placeholder="">
+            </td>   
+            <tr>
+                <td>
+                      <input type="text" 
+                           placeholder="">
+                  </td>  
+                  <td>
+                    <input type="text" 
+                         placeholder="">
+                </td>       
+                <td>
+                    <input type="text" 
+                         placeholder="">
+                </td>      
+            </tr>   
+            <tr>
+                <td>
+                      <input type="text" 
+                           placeholder="">
+                  </td>  
+                  <td>
+                    <input type="text" 
+                         placeholder="">
+                </td>       
+                <td>
+                    <input type="text" 
+                         placeholder="">
+                </td>      
+            </tr>
+            <tr>
+                <td>
+                      <input type="text" 
+                           placeholder="">
+                  </td>  
+                  <td>
+                    <input type="text" 
+                         placeholder="">
+                </td>       
+                <td>
+                    <input type="text" 
+                         placeholder="">
+                </td>      
+            </tr>
+            <tr>
+                <td>
+                      <input type="text" 
+                           placeholder="">
+                  </td>  
+                  <td>
+                    <input type="text" 
+                         placeholder="">
+                </td>       
+                <td>
+                    <input type="text" 
+                         placeholder="">
+                </td>      
+            </tr>
+            <tr>
+                <td>
+                      <input type="text" 
+                           placeholder="">
+                  </td>  
+                  <td>
+                    <input type="text" 
+                         placeholder="">
+                </td>       
+                <td>
+                    <input type="text" 
+                         placeholder="">
+                </td>      
+            </tr>
+        </tr>
+    </table>
+    </div>
+
+    <div class="subhead3">
+        <hr class="break-line">   
+      </div>
+
+    <div class = "tenets">
+        <h4>Chronicle Tenets</h4>
+        <label for="tallerTextarea"></label>
+        <textarea id="tallerTextarea" name="tallerTextarea" cols="25"></textarea>
+        </div>
+    <div class = "tenets">
+            <h4>Touchstones</h4>
+            <label for="tallerTextarea"></label>
+            <textarea id="tallerTextarea" name="tallerTextarea" cols="25"></textarea>
+            </div>
+    <div class = "tenets">
+                <h4>Creed Fields</h4>
+                <label for="tallerTextarea"></label>
+                <textarea id="tallerTextarea" name="tallerTextarea" cols="25"></textarea>
+                </div>
+
+        
+
+
+
+
+  
+
+    <div class="attrib1">
+        <h3>Physical</h3>
+        <div>
+          <div class="dotrow">
+
+  
+    <div class="advflaws1">
+        <h3>Advantages & Flaws</h3>
+
+        <table>   
+            <tr>         
+        <td>
+        <input type="text" name="attr_advflaw1" />
+        <span></span> <input type="checkbox" name="reason" value="1" />
+        <span></span> <input type="checkbox" name="reason" value="2" />
+        <span></span> <input type="checkbox" name="reason" value="3" />
+        <span></span> <input type="checkbox" name="reason" value="4" />
+        <span></span> <input type="checkbox" name="reason" value="5" />
+        </td>
+        </tr>
+        <tr>
+            <td> 
+   
+
+        <input type="text" name="attr_advflaw1" />
+        <span></span> <input type="checkbox" name="reason" value="1" />
+        <span></span> <input type="checkbox" name="reason" value="2" />
+        <span></span> <input type="checkbox" name="reason" value="3" />
+        <span></span> <input type="checkbox" name="reason" value="4" />
+        <span></span> <input type="checkbox" name="reason" value="5" />
+
+        </td>
+    </tr>
+    <tr>
+        <td> 
+
+
+    <input type="text" name="attr_advflaw1" />
+    <span></span> <input type="checkbox" name="reason" value="1" />
+    <span></span> <input type="checkbox" name="reason" value="2" />
+    <span></span> <input type="checkbox" name="reason" value="3" />
+    <span></span> <input type="checkbox" name="reason" value="4" />
+    <span></span> <input type="checkbox" name="reason" value="5" />
+
+    </td>
+</tr>
+<tr>
+    <td> 
+
+
+<input type="text" name="attr_advflaw1" />
+<span></span> <input type="checkbox" name="reason" value="1" />
+<span></span> <input type="checkbox" name="reason" value="2" />
+<span></span> <input type="checkbox" name="reason" value="3" />
+<span></span> <input type="checkbox" name="reason" value="4" />
+<span></span> <input type="checkbox" name="reason" value="5" />
+
+</td>
+</tr>
+<tr>
+    <td> 
+
+
+<input type="text" name="attr_advflaw1" />
+<span></span> <input type="checkbox" name="reason" value="1" />
+<span></span> <input type="checkbox" name="reason" value="2" />
+<span></span> <input type="checkbox" name="reason" value="3" />
+<span></span> <input type="checkbox" name="reason" value="4" />
+<span></span> <input type="checkbox" name="reason" value="5" />
+
+</td>
+</tr>
+<tr>
+    <td> 
+
+
+<input type="text" name="attr_advflaw1" />
+<span></span> <input type="checkbox" name="reason" value="1" />
+<span></span> <input type="checkbox" name="reason" value="2" />
+<span></span> <input type="checkbox" name="reason" value="3" />
+<span></span> <input type="checkbox" name="reason" value="4" />
+<span></span> <input type="checkbox" name="reason" value="5" />
+
+</td>
+</tr>
+<tr>
+    <td> 
+
+
+<input type="text" name="attr_advflaw1" />
+<span></span> <input type="checkbox" name="reason" value="1" />
+<span></span> <input type="checkbox" name="reason" value="2" />
+<span></span> <input type="checkbox" name="reason" value="3" />
+<span></span> <input type="checkbox" name="reason" value="4" />
+<span></span> <input type="checkbox" name="reason" value="5" />
+
+</td>
+</tr>
+<tr>
+    <td> 
+
+
+<input type="text" name="attr_advflaw1" />
+<span></span> <input type="checkbox" name="reason" value="1" />
+<span></span> <input type="checkbox" name="reason" value="2" />
+<span></span> <input type="checkbox" name="reason" value="3" />
+<span></span> <input type="checkbox" name="reason" value="4" />
+<span></span> <input type="checkbox" name="reason" value="5" />
+
+</td>
+</tr>
+<tr>
+    <td> 
+
+
+<input type="text" name="attr_advflaw1" />
+<span></span> <input type="checkbox" name="reason" value="1" />
+<span></span> <input type="checkbox" name="reason" value="2" />
+<span></span> <input type="checkbox" name="reason" value="3" />
+<span></span> <input type="checkbox" name="reason" value="4" />
+<span></span> <input type="checkbox" name="reason" value="5" />
+
+</td>
+</tr>
+<tr>
+    <td> 
+
+
+<input type="text" name="attr_advflaw1" />
+<span></span> <input type="checkbox" name="reason" value="1" />
+<span></span> <input type="checkbox" name="reason" value="2" />
+<span></span> <input type="checkbox" name="reason" value="3" />
+<span></span> <input type="checkbox" name="reason" value="4" />
+<span></span> <input type="checkbox" name="reason" value="5" />
+
+</td>
+</tr>
+<tr>
+    <td> 
+
+
+<input type="text" name="attr_advflaw1" />
+<span></span> <input type="checkbox" name="reason" value="1" />
+<span></span> <input type="checkbox" name="reason" value="2" />
+<span></span> <input type="checkbox" name="reason" value="3" />
+<span></span> <input type="checkbox" name="reason" value="4" />
+<span></span> <input type="checkbox" name="reason" value="5" />
+
+</td>
+</tr>
+    </table>
+    </div>   
+    
+
+      <h3>Equipment</h3>
+      <div class="list">
+        <input type="text" name="attr_Equipment1Name" />
+        <input type="text" name="attr_Equipment2Name" />
+        <input type="text" name="attr_Equipment3Name" />
+        <input type="text" name="attr_Equipment4Name" />
+        <input type="text" name="attr_Equipment5Name" />
+        <input type="text" name="attr_Equipment6Name" />
+        <input type="text" name="attr_Equipment7Name" />
+        <input type="text" name="attr_Equipment8Name" />
+        <input type="text" name="attr_Equipment9Name" />
+        <input type="text" name="attr_Equipment10Name" />
+        <input type="text" name="attr_Equipment11Name" />     
+        <input type="text" name="attr_Equipment12Name" />
+        <input type="text" name="attr_Equipment13Name" />
+        <input type="text" name="attr_Equipment14Name" />
+ 
+      </div>
+  
+      <div class="textbox">
+        <h3>Notes</h3>
+        <textarea name="attr_notes" style="width: 90%"></textarea>
+      </div>
+  
+    </div> 
+  
+
+      <div class="textbox">
+        <h3>Equipment</h3>
+        <textarea name="attr_equipment" style="width: 90% ; height: auto"></textarea>
+      </div>
+    </div>
+  
+  </div>
+</body>
+</html>
