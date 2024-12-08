@@ -1,0 +1,139 @@
+                    
+            #tallerTextarea {
+                height: 200px; 
+                resize: none;
+            }
+
+            .sheet-checkbox {
+                width:15px;
+                height: 15px;
+                border-radius: 50%;
+                vertical-align: middle;
+                border: 1px solid black;
+                appearance: none;
+                -webkit-appearance: none;
+                outline: none;
+                cursor: pointer;
+              }
+              .sheet-checkbox:checked {
+                appearance: none;                
+                background-color: black;
+              }
+
+              .sheet-checkbox2 {
+                width:15px;
+                height: 15px;
+                border: 1px solid black;
+                appearance: none;
+                -webkit-appearance: none;
+                outline: none;
+                cursor: pointer;
+              }
+              
+              .sheet-checkbox2:checked
+			  {                            
+                 background: #000000;			
+              }                 
+
+				tr, td {
+				  padding-right: 50px;
+				  padding-left: 50px;
+				  padding-top:15px;
+				}
+				
+				h1 {
+					text-align: left;
+					padding-left: 50px;
+				}
+				
+				.sheet-shorty {
+					border: 0;
+					max-width: 85px;					
+				}
+				
+				.sheet-shorty-short {
+					border: 0;
+					max-width: 70px;					
+				}
+				
+/* Configure the button styling. This example makes it look like a checkbox. */
+.charsheet button.sheet-health {
+  width: 10px;
+  height: 10px;
+  padding: 0;
+  border: solid 1px #000000;
+  background: #efefef;
+}
+
+/* Draw a diagonal slash if the hidden attribute value is "1" */
+.charsheet input.sheet-health[value="1"] + button.sheet-health {
+  background:
+    linear-gradient(to top left,
+      #efefef 0%,
+      #efefef calc(50% - 0.8px),
+      rgba(0,0,0,1) 50%,
+      #efefef calc(50% + 0.8px),
+      #efefef 100%);
+}
+/* Draw two diagonal slashes if the hidden attribute value is "2" */
+.charsheet input.sheet-health[value="2"] + button.sheet-health {
+  background:
+    linear-gradient(to top left,
+      rgba(0,0,0,0) 0%,
+      rgba(0,0,0,0) calc(50% - 0.8px),
+      rgba(0,0,0,1) 50%,
+      rgba(0,0,0,0) calc(50% + 0.8px),
+      rgba(0,0,0,0) 100%),
+    linear-gradient(to top right,
+      #efefef 0%,
+      #efefef calc(50% - 0.8px),
+      rgba(0,0,0,1) 50%,
+      #efefef calc(50% + 0.8px),
+      #efefef 100%);
+}
+/* Draw three diagonal slashes if the hidden attribute value is "3" */
+.charsheet input.sheet-health[value="3"] + button.sheet-health {
+  background:
+    linear-gradient(to top left,
+      rgba(0,0,0,0) 0%,
+      rgba(0,0,0,0) calc(50% - 0.8px),
+      rgba(0,0,0,1) 50%,
+      rgba(0,0,0,0) calc(50% + 0.8px),
+      rgba(0,0,0,0) 100%),
+    linear-gradient(to top right,
+      rgba(0,0,0,0) 0%,
+      rgba(0,0,0,0) calc(50% - 0.8px),
+      rgba(0,0,0,1) 50%,
+      rgba(0,0,0,0) calc(50% + 0.8px),
+      rgba(0,0,0,0) 100%),
+    linear-gradient(to right,
+      #efefef 0%,
+      #efefef calc(50% - 0.8px),
+      rgba(0,0,0,1) 50%,
+      #efefef calc(50% + 0.8px),
+      #efefef 100%);
+}
+/* Fill if the hidden attribute value is "4" */
+.charsheet input.sheet-health[value="4"] + button.sheet-health {
+  background: #000000;
+
+}
+
+/* Hide content that does not correspond with the hidden attribute's value. */
+.charsheet input.sheet-health[value="0"] ~ :not(.sheet-health):not(.sheet-no-damage) {
+  display: none;
+}
+.charsheet input.sheet-health[value="1"] ~ :not(.sheet-health):not(.sheet-bashing-damage) {
+  display: none;
+}
+.charsheet input.sheet-health[value="2"] ~ :not(.sheet-health):not(.sheet-lethal-damage) {
+  display: none;
+}
+.charsheet input.sheet-health[value="3"] ~ :not(.sheet-health):not(.sheet-aggravated-damage) {
+  display: none;
+}
+.charsheet input.sheet-health[value="4"] ~ :not(.sheet-health):not(.sheet-aggravated-damage) {
+  display: none;
+}
+				
+				
